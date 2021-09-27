@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOCKER_BE = laravel-tdd-docker-be
+DOCKER_BE = laravel-docker-be
 UID = $(shell id -u)
 
 help: ## Show this help message

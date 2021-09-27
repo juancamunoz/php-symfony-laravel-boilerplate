@@ -9,7 +9,7 @@ This repository contains the basic configuration for a complete local environmen
 
 ### Installation:
 - Run `make build` to create all containers
-- Run `make start` to spin up containers
+- Run `make run` to spin up containers
 - Enter the PHP container with `make ssh-be`
 - Install your Laravel app with `composer create-project laravel/laravel app-name`
 - Move the content to the root folder with `mv app-name/* . && mv app-name/.env .`. This is necessary since Composer won't install the project if the folder already contains data.
