@@ -12,8 +12,8 @@ This repository contains the basic configuration for a complete local environmen
 - Run `make run` to spin up containers
 - Enter the PHP container with `make ssh-be`
 - Install your Laravel app with `composer create-project laravel/laravel app-name`
-- Move the content to the root folder with `mv app-name/* . && mv app-name/.env .`. This is necessary since Composer won't install the project if the folder already contains data.
-- Copy the content from `app-name/.gitignore` and paste it in the root's folder `.gitignore`
+- Move the content to the root folder with `mv app-name/* .`. This is necessary since Composer won't install the project if the folder already contains data.
+- Copy the content from `app-name/.gitignore` and paste it in the root's folder `.gitignore` and `.env, .env.example`
 - Remove `app-name` folder (not needed anymore)
-- Navigate to `localhost:1000` so you can see the Symfony welcome page :)
+- Navigate to `localhost:1000` so you can see the Laravel welcome page :)
 
