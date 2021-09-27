@@ -31,7 +31,7 @@ services:
       - ./docker/php/xdebug-linux.ini:/usr/local/etc/php/conf.d/xdebug.ini # Linux users
       - ~/.ssh/id_rsa:/home/appuser/.ssh/id_rsa
     depends_on:
-      - laravel-docker-
+      - laravel-docker-db
     networks:
       - laravel-docker-network
 
