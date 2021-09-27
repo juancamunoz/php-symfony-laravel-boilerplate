@@ -1,6 +1,6 @@
-# Laravel boilerplate
+# Laravel boilerplate PHP 8 FPM, MySQL 8.0 and Ngnix with Docker & Docker Compose
 
-This repository contains the basic configuration for a complete local environment for Laravel Projects
+This repository contains the basic configuration for a complete local environment for Laravel Projects with docker
 
 ### Content:
 - NGINX 1.19 container to handle HTTP requests
