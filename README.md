@@ -4,7 +4,7 @@ This repository contains the basic configuration for a complete local environmen
 
 ### Content:
 - NGINX 1.19 container to handle HTTP requests
-- PHP 8.0 container to host your Laravel application
+- PHP 8.1 container to host your Laravel application
 - MySQL 8.0 container to store databases
 
 ### Installation:
