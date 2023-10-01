@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOCKER_BE = laravel-docker-be
+DOCKER_BE = app-docker-be
 UID = $(shell id -u)
 
 help: ## Show this help message
@@ -33,3 +33,6 @@ composer-install: ## Installs composer dependencies
 
 ssh-be: ## ssh's into the be container
 	U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} bash
+
+container-names: ## change default container names (need param name)
+	find . -type f -exec sed -i 's/barberify-ddd/$(name)/g' {} +

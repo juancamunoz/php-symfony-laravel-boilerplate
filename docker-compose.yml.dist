@@ -1,8 +1,8 @@
 version: '3.5'
 
 services:
-  laravel-docker-web:
-    container_name: laravel-docker-web
+  app-docker-web:
+    container_name: app-docker-web
     build:
       context: ./docker/nginx
       args:
@@ -12,12 +12,12 @@ services:
     volumes:
       - ./public:/appdata/www/public
     depends_on:
-      - laravel-docker-be
+      - app-docker-be
     networks:
-      - laravel-docker-network
+      - app-docker-network
 
-  laravel-docker-be:
-    container_name: laravel-docker-be
+  app-docker-be:
+    container_name: app-docker-be
     build:
       context: docker/php
       args:
@@ -31,12 +31,12 @@ services:
       - ./docker/php/xdebug-linux.ini:/usr/local/etc/php/conf.d/xdebug.ini # Linux users
       - ~/.ssh/id_rsa:/home/appuser/.ssh/id_rsa
     depends_on:
-      - laravel-docker-db
+      - app-docker-db
     networks:
-      - laravel-docker-network
+      - app-docker-network
 
-  laravel-docker-db:
-    container_name: laravel-docker-db
+  app-docker-db:
+    container_name: app-docker-db
     image: mysql:8.0
     ports:
       - "3350:3306"
@@ -47,12 +47,12 @@ services:
       MYSQL_ROOT_PASSWORD: root
     command: mysqld --sql_mode="STRICT_ALL_TABLES,NO_ENGINE_SUBSTITUTION"
     volumes:
-      - laravel-docker-db-data:/var/lib/mysql
+      - app-docker-db-data:/var/lib/mysql
     networks:
-      - laravel-docker-network
+      - app-docker-network
 
 volumes:
-  laravel-docker-db-data:
+  app-docker-db-data:
 
 networks:
-  laravel-docker-network:
+  app-docker-network:
