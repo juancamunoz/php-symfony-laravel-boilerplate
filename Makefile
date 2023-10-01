@@ -35,4 +35,4 @@ ssh-be: ## ssh's into the be container
 	U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} bash
 
 container-names: ## change default container names (need param name)
-	find . -type f -exec sed -i 's/barberify-ddd/$(name)/g' {} +
+	find . -type f -exec sed -i 's/app-docker/$(name)/g' {} +
